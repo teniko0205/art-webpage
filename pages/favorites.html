@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏 - 藝術學習資源中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-palette text-2xl text-purple-600"></i>
+                    <a href="../index.html" class="font-bold text-xl text-gray-800">藝術學習資源中心</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容 -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">我的收藏</h1>
+
+            <!-- 收藏分類標籤 -->
+            <div class="flex justify-center mb-8 space-x-4" data-aos="fade-up">
+                <button class="category-btn active px-4 py-2 rounded-full bg-purple-600 text-white" data-category="all">
+                    全部
+                </button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-purple-600 hover:text-white transition-colors" data-category="course">
+                    課程
+                </button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-purple-600 hover:text-white transition-colors" data-category="tool">
+                    工具
+                </button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-purple-600 hover:text-white transition-colors" data-category="video">
+                    影片
+                </button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-purple-600 hover:text-white transition-colors" data-category="history">
+                    藝術史
+                </button>
+            </div>
+
+            <!-- 收藏列表 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="favorites-container">
+                <!-- 收藏項目將由 JavaScript 動態生成 -->
+            </div>
+
+            <!-- 無收藏時顯示 -->
+            <div id="no-favorites" class="hidden text-center py-12">
+                <i class="fas fa-heart text-gray-300 text-5xl mb-4"></i>
+                <p class="text-gray-500 text-xl">還沒有收藏任何項目</p>
+                <a href="../index.html" class="inline-block mt-4 text-purple-600 hover:text-purple-800">
+                    返回首頁瀏覽 →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-4">藝術學習資源中心 © 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
